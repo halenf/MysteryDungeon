@@ -1,0 +1,18 @@
+///<summary>
+/// Author:
+///
+///
+///
+///</summary>
+
+using UnityEngine;
+
+namespace MysteryDungeon
+{
+	#ROOTNAMESPACEBEGIN#
+	public class #SCRIPTNAME# : MonoBehaviour
+	{
+		#NOTRIM#
+	}
+	#ROOTNAMESPACEEND#
+}

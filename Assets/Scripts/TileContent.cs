@@ -9,12 +9,28 @@ using UnityEngine;
 
 namespace MysteryDungeon
 {
-	[System.Serializable]
-	public class TileContent
+	public enum TileType
 	{
-		private Entity m_entity = null;
-		private bool m_isWall = false;
+		Empty,
+		Wall,
+		Entity,
+		Stairs,
+		Item,
+		Interactable
+	}
 
-		public bool IsWalkable => m_entity == null && !m_isWall;
+	[System.Serializable]
+	public struct TileContent
+	{
+		private TileType m_type;
+		public TileType Type => m_type;
+		private GameObject m_objectOnTile;
+		public GameObject ObjectOnTile => m_objectOnTile;
+
+		public TileContent(TileType type, GameObject objectOnTile = null)
+		{
+			m_type = type;
+			m_objectOnTile = objectOnTile;
+		}
 	}
 }
